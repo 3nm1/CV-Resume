@@ -1,0 +1,310 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Mikael Engström}
+\tagline{Automationsingenjör med erfarenhet av elkonstruktion}
+%% You can add multiple photos on the left or right
+%\photoR{2.8cm}{Globe_High}
+\photoL{2.5cm}{Yacht_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{mikael@engstrom.live}
+  \phone{+46 70 581 99 74 }
+  \mailaddress{Åkaregatan 4, 38650 Mörbylånga}
+  \location{Mörbylånga, Sverige}
+  \homepage{www.engstrom.live}
+  %\twitter{@twitterhandle}
+  \linkedin{mikael-engström-438b14103}
+  \github{3nm1}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{ERFARENHET}
+
+\cvevent{Underhållsingenjör}{AB Gustav Kähr}{Januari 2022 -- Nuvarande}{Nybro}
+\begin{itemize}
+\item Förbättringsprojekt såsom utbyte av befintliga styrsystem
+\item Felsökning av befintlig plc-logik
+\item Stöd till underhållselektriker
+\item Robotsupport på motoman robotar
+\item Uppdatering av elunderlag i Elprocad
+\item Dokumentation i form av funktionsbeskrivningar och driftdokument
+\end{itemize}
+\cvtag{Mitsubishi GX Works}
+\cvtag{Mitsubishi GT Designer}
+\cvtag{Siemens TIA-portal}
+\cvtag{Elprocad}\\
+\divider
+
+\cvevent{Automationsingenjör}{Rejlers Sverige AB}{November 2009 -- Januari 2022}{Kalmar}
+\begin{itemize}
+\item Plc- och Hmiprogrammering i flera olika utvecklingsmiljöer
+\item Självgående arbete ute hos kunder i både Sverige och Världen
+\item Robotprogrammering av ABB och Motoman robotar
+\item Elkonstruktion i Elprocad och Eplan P8
+\item Scada-programmering
+\end{itemize}
+\cvtag{Eplan P8}
+\cvtag{ABB Robotstudio}
+\cvtag{AB RSlogix 5000}
+\cvtag{SE Pacdrive 3}
+\cvtag{Siemens TIA-portal}
+\cvtag{Citect}\\
+\cvsection{Projekt}
+
+\cvevent{PLC utbyte ink. distribuerade noder och FRO-enheter}{Scania AB}{2021 - 2022}{Oskarshamn}
+\begin{itemize}
+\item Elkonstruktion i Eplan P8 enligt Scanias ritningsstandard
+\item Kvalitetskontroll av apparatskåpsbyggnation
+\item Koordinering inköp av hårdvara
+\item Förstudier och dokumentation av befintlig anläggning
+\end{itemize}
+
+\divider
+
+\cvevent{Maskinlinje till Brasilien}{NPB Automation AB}{2021 - 2021}{Jönkoping}
+Ansvarig för uppstart och idrifttagning av packcenter, en hanteringsutrustning
+som paketerar lock till aluminiumburkar. Programmering i Rslogix 5000 och
+Factorytalk.
+
+\divider
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+\cvevent{Optimeringsarbete}{Scania AB}{2020 - 2021}{Oskarshamn}
+Validering och drifttagning av nya robotfunktioner, för att minska cykeltider och
+öka driftsäkerheten. Rör sig om ungefär 256 st ABB-robotar med olika
+arbetsmoment och bestyckning..
+
+\divider
+
+\cvevent{Utbyte av styrsystem}{Borgholms Energi}{2019 - 2020}{Borgholm}
+Upprättande av elunderlag i Eplan P8, för ett nytt apparatstyrskåp som ersätter
+befintligt. Stor förundersökning då yttre förbindningsscheman saknades, så allt
+yttre kablage fick kartläggas på plats. Handläggning av elektriker på plats under
+drifttagningen, samt viss projektledning.
+
+\medskip
+
+\cvsection{En dag i mitt liv}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\wheelchart{1.5cm}{0.5cm}{%
+  8/8em/accent!30/{Sömn,\\skönhetssömn},
+  3/8em/accent!40/Linuxnörd på natten,
+  8/8em/accent!50/Automationsingenjör om dagen,
+  3/10em/accent/Friluftsliv och avkoppling,
+  2/6em/accent!20/Med vänner och familj
+}
+
+\cvsection{Ideellt arbete}
+
+\cvevent{Scoutledare}{Färjestadens scoutkår}{Oktober 1998 -- Nuvarande}{Färjestaden}
+Ungdomsledare för scouter i årskurs 6-9 samt gymnasieungdomar (16-18år)
+Ett arbete som har gett mig ledarskapserfarenheter och känsla för gruppdynamik och vilka metoder man kan använda för att få ungdomar att aktivt ifrågasätta och leda varandra.
+
+\medskip
+
+Det är väldigt enkelt egentligen. Att vara scout är att göra sitt bästa för att bli den bästa versionen av sig själv. Att tillsammans med sina kompisar uppleva spännande äventyr och testa nya saker.
+%\cvtag{Hard-working}\\
+
+\divider
+
+\cvevent{Infraansvarig hubbfunktionen}{Jamboree22}{Oktober 2020 -- Augusti 2022}{Norra Åsum, Skåne}
+Ansvarig för infrastrukturen för en av funktionerna inför och under ett av Scouternas storläger med över 10 000 besökare.\smallskip
+\begin{itemize}
+\item Koordinerade utplacering av mässtält, caféer, resturanger
+\item Samverkade med andra funktioner för att lösa transporter, el- och vvs installationer
+\item Övervakade den dagliga driften, och löste de problem som eventuellt upptstod
+\end{itemize}
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Livsfilosofi}
+
+\begin{quote}
+"Försöker göra världen lite bättre än när jag fann den."
+\end{quote}
+
+%\cvsection{Mest stolt över}
+
+%\cvachievement{\faPlaneDeparture}{Scoutläger på Malta}{Med 10 scouter från hela Sverige åkte jag %till Malta för en unik lägerupplevelse ihop med scouter från Malta,Polen, Bulgarien och Makedonien}
+
+%\divider
+
+%\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+%\divider
+
+%\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\cvsection{Kompetenser}
+
+\cvtag{Robotprogrammering}
+\cvtag{Plc-programmering}\\
+\cvtag{Hmi-programmering}
+\cvtag{Säkerhetsplc}\\
+\cvtag{Scada-programmering}
+\cvtag{Uppdragsledning}\\
+\cvtag{Elkonstruktion}\\
+\divider\smallskip
+
+\cvtag{Mikrokontroller}
+\cvtag{Enkortsdatorer}\\
+\cvtag{Nätverk}
+\cvtag{LaTeX}\\
+
+\cvsection{Språk}
+
+\cvskill{Engelska}{5}
+\divider
+
+\cvskill{Svenska}{5}
+\divider
+
+%\cvskill{German}{3.5} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+\cvsection{UTBILDNING}
+
+\cvevent{Automationstekniker}{Elajo Technical Education Center AB}{2007 -- 2009}{}
+%Thesis title: Wonderful Research
+
+\divider
+
+\cvevent{Nätverksadministratör/ Systemtekniker}{Högskolan i Kalmar}{2002 -- 2004}{}
+
+\divider
+
+% \divider
+\newpage
+\cvsection{Referenser}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Gert Håkansson}{AB Gustav Kähr}{gert.hakansson@kahrs.se}
+%{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Nils Börjesson}{Rejlers Sverige AB}{nils.borjesson@rejlers.se}
+
+
+\end{paracol}
+
+
+\end{document}
