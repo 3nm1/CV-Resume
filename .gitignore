@@ -1,0 +1,7 @@
+# Generic ignores
+*.log
+*.aux
+*.bcf
+*.out
+*.xml
+*.synctex(busy)
